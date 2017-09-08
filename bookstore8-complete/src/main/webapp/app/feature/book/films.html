@@ -1,5 +1,5 @@
 <div ng-controller="FilmController as ctrl">
-<h2>Available Books</h2>
+<h2>Available Films</h2>
     <div class="form-group">
         <label filmfilter="usr">Filter:</label>
         <input type="text" ng-model="filmFilter.Title" class="form-control" id="filmfilter">
@@ -9,8 +9,8 @@
     <tr>
         <th>Director</th>
         <th ng-click="ctrl.doSort()">Title</th>
-        <th>Genre</th>
-        <th>Published</th>
+        <th>Release Date</th>
+        <th>Age Rating</th>
     </tr>
     <tr ng-repeat="film in ctrl.films | filter:filmFilter | orderBy:ctrl.sortBy:ctrl.reverse">
         <td>{{film.director | uppercase}}</td>

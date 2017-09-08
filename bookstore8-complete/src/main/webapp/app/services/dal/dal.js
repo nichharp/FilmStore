@@ -2,7 +2,7 @@
 
 (function () {
 
-    angular.module("bookStore").service("dal", ["$http", "$q", "$log", Dal]);
+    angular.module("filmStore").service("dal", ["$http", "$q", "$log", Dal]);
 
     function Dal ($http, $q, $log) {
         this.http = (function serviceCaller() {

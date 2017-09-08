@@ -3,10 +3,10 @@
 (function () {
 
     angular.module('filmStore').config(function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/book");
+        $urlRouterProvider.otherwise("/film");
 
-        $stateProvider.state("book", {
-            url: "/book",
+        $stateProvider.state("film", {
+            url: "/film",
             templateUrl: "app/feature/book/films.html"
         }).state("dashboard", {
             url: "/dashboard",

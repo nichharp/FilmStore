@@ -11,7 +11,9 @@ import javax.ws.rs.Produces;
 
 import com.qa.student.bookstore.service.FilmService;
 
-@Path("/bookstore")
+import java.util.logging.Logger;
+
+@Path("/filmstore")
 public class FilmEndPoint {
 
 	@Inject
@@ -27,16 +29,18 @@ public class FilmEndPoint {
 	@POST
 	@Path("/json")
 	@Produces({ "application/json" })
-	public String addNewFilmToMap(String filmJson) {
-		return filmService.addNewFilm(filmJson);
+	public void addNewFilmToMap(String filmJson) {
+		String[] bitch = filmJson.split(";");
+		for (int i =0; i<bitch.length;i++){
+			filmService.addNewFilm(bitch[i]);
+		}
+//		return filmService.addNewFilm(filmJson);
 	}
 
 	@PUT
 	@Path("/json/{id}")
 	@Produces({ "application/json" })
-	public String replaceFilmFromFilmStore(@PathParam("id") Integer id, String filmJson) {
-		return filmService.replaceFilm(id, filmJson);
-	}
+	public String replaceFilmFromFilmStore(@PathParam("id") Integer id, String filmJson) { return filmService.replaceFilm(id, filmJson); }
 
 	@DELETE
 	@Path("/json/{id}")

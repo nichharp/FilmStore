@@ -18,6 +18,8 @@ public class Film {
 	private String desc;
 	private String embedded;
 
+	public Film(){}
+
 
 	public Film(String name, String director, int releaseDate, String age, int runtime, String desc, String embedded) {
 		this.director = director;
@@ -47,23 +49,17 @@ public class Film {
 
 	public String getDesc() { return desc; }
 
-	public void setDesc(String desc) {
-		this.desc = desc;
-	}
+	public void setDesc(String desc) { this.desc = desc;	}
 
 	public int getReleaseDate() {
 		return releaseDate;
 	}
 
+	public void setReleaseDate(int releaseDate) { this.releaseDate = releaseDate;	}
+
 	public String getEmbedded() { return embedded; }
 
-	public void setEmbedded(String embedded) {
-		this.embedded = embedded;
-	}
-
-	public void setReleaseDate(int releaseDate) {
-		this.releaseDate = releaseDate;
-	}
+	public void setEmbedded(String embedded) { this.embedded = embedded;	}
 
 	public String getName() {
 		return name;

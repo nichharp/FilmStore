@@ -7,19 +7,19 @@
     function FilmDal (dal) {
 
         this.getFilms = function () {
-            return dal.http.GET("rest/bookstore/json");
+            return dal.http.GET("rest/filmstore/json");
         };
 
         this.saveFilms = function (filmToSave) {
-            return dal.http.POST("rest/bookstore/json", filmToSave);
+            return dal.http.POST("rest/filmstore/json", filmToSave);
         };
 
         this.updateFilm = function (filmToUpdate) {
-            return dal.http.PUT("rest/bookstore/json/", filmToUpdate);
+            return dal.http.PUT("rest/filmstore/json/", filmToUpdate);
         };
 
         this.deleteFilm = function (filmToDelete) {
-            return dal.http.DELETE("/rest/bookstore/json/", filmToDelete);
+            return dal.http.DELETE("/rest/filmstore/json/", filmToDelete);
         };
 
     }

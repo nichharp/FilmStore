@@ -61,7 +61,7 @@ public class FilmServiceImpl implements FilmService {
 	}
 
 	private void initFilmStore() {
-		Film aFilm = new Film("Eragon", "Stefan Fangmeier", 2006, "PG", 104, "In his homeland of Alagaesia, a farm boy happens upon a dragon's egg -- a discovery that leads him on a predestined journey where he realizes he's the one person who can defend his home against an evil king.", "<iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/b5eMJkuJHwo\" frameborder=\"0\" allowfullscreen></iframe>" );
+		Film aFilm = new Film("Eragon", "Stefan Fangmeier", 2006, "PG", 104, "In his homeland of Alagaesia, a farm boy happens upon a dragon's egg -- a discovery that leads him on a predestined journey where he realizes he's the one person who can defend his home against an evil king.", "Eragon embedded code" );
 		filmMap.put(1, aFilm);
 	}
 
